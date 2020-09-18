@@ -32,25 +32,22 @@ const Listing = (props) => {
                         <TableCell>Delete</TableCell>
                     </TableRow>
                 </TableHead>
-                {/* <TableBody>
-                {props.businesses.map((car, idx) => (
-                    <TableRow key={car.id}>
-                        <TableCell component="th" scope="row">
-                            {car.id}
-                        </TableCell>
-                        <TableCell>{car["name"]}</TableCell>
-                        <TableCell>{car["mpg"]}</TableCell>
-                        <TableCell>{car["cylinders"]}</TableCell>
-                        <TableCell>{car["horsepower"]}</TableCell>
+                <TableBody>
+                {props.businesses.map((business, idx) => (
+                    <TableRow key={idx}>
+                        <TableCell>{business["name"]}</TableCell>
+                        <TableCell>{business["description"]}</TableCell>
+                        <TableCell>{business["hours"]}</TableCell>
+                        <TableCell>{business["address"]}</TableCell>
                         <TableCell>
-                            <DeleteIcon
+                            {/* <DeleteIcon
                                 // add onClick method here
                                 onClick = {() => props.removeCar(idx) }
-                                className="icon text-red" />
+                                className="icon text-red" /> */}
                         </TableCell>
                     </TableRow>
                 ))}
-                </TableBody> */}
+                </TableBody>
             </Table>
         </Container>
     )
