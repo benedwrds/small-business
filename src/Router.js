@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
 import cookie from 'cookie'
-import Listing from './components/Listing'
+import Listing from './containers/Listing'
 import Login from './components/Login'
  import Add from './components/Add'
 

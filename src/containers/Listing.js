@@ -9,4 +9,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStatetoProps)(Listing)
+export default connect(mapStateToProps)(Listing)
