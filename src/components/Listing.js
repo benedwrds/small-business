@@ -33,7 +33,7 @@ const Listing = (props) => {
                     </TableRow>
                 </TableHead>
                 {/* <TableBody>
-                {props.cars.map((car, idx) => (
+                {props.businesses.map((car, idx) => (
                     <TableRow key={car.id}>
                         <TableCell component="th" scope="row">
                             {car.id}
