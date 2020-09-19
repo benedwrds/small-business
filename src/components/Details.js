@@ -4,9 +4,14 @@
 import React from 'react';
 
 const Details = (props) => {
+
   return (
+    
       <div>
-        
+        <p>Hello</p>
+        {props.businesses[0].name}
+        <br></br>
+        {props.businesses[0].description}
       </div>
     )
   }

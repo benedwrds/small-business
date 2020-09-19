@@ -4,7 +4,7 @@ import cookie from 'cookie'
 import Listing from './containers/Listing'
 import Login from './components/Login'
  import Add from './components/Add'
- import Details from './components/Details'
+ import Details from './containers/Details'
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie)
