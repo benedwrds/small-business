@@ -6,7 +6,8 @@ import {
     TableCell,
     TableHead,
     TableRow,
-    Toolbar
+    Toolbar, 
+    Link
 } from '@material-ui/core'
 // import DeleteIcon from '@material-ui/icons/Delete'
 // import Chart from '../containers/Chart'
@@ -35,7 +36,8 @@ const Listing = (props) => {
                 <TableBody>
                 {props.businesses.map((business, idx) => (
                     <TableRow key={idx}>
-                        <TableCell>{business["name"]}</TableCell>
+                        {/* <TableCell>{business["name"]}</TableCell> */}
+                        <TableCell><Link to="/details">{business["name"]}</Link></TableCell>
                         <TableCell>{business["description"]}</TableCell>
                         <TableCell>{business["hours"]}</TableCell>
                         <TableCell>{business["address"]}</TableCell>
