@@ -12,7 +12,8 @@ const Details = (props) => {
         <p>Hello</p>
          {business.name} 
         <br></br>
-        {props.businesses[0].description}
+        {business.description}
+        {/* {props.businesses[0].description} */}
       </div>
     )
   }

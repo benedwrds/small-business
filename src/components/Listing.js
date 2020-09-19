@@ -37,7 +37,7 @@ const Listing = (props) => {
                 {props.businesses.map((business, idx) => (
                     <TableRow key={idx}>
                         {/* <TableCell>{business["name"]}</TableCell> */}
-                        <TableCell><Link to="/details">{business["name"]}</Link></TableCell>
+                        <TableCell><Link href ={`/details/${business.id}`}>{business["name"]}</Link></TableCell>
                         <TableCell>{business["description"]}</TableCell>
                         <TableCell>{business["hours"]}</TableCell>
                         <TableCell>{business["address"]}</TableCell>
