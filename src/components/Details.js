@@ -4,12 +4,13 @@
 import React from 'react';
 
 const Details = (props) => {
-
+  const id = props.match.params.id
+  const business = props.businesses.find(b => b.id == id)
   return (
     
       <div>
         <p>Hello</p>
-        {props.businesses[0].name}
+         {business.name} 
         <br></br>
         {props.businesses[0].description}
       </div>

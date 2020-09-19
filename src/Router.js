@@ -28,7 +28,7 @@ const Router = () => {
         <Switch>
             <Route exact path="/" component={Listing} />
             <Route path="/login" component={Login} />
-            <Route path="/details" component={Details}/> 
+            <Route path="/details/:id" component={Details}/> 
              <Route path="/add" component={Add} />      
         </Switch>
     );
