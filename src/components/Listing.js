@@ -9,20 +9,20 @@ import {
     Toolbar, 
     Link
 } from '@material-ui/core'
-// import DeleteIcon from '@material-ui/icons/Delete'
+import DeleteIcon from '@material-ui/icons/Delete'
 // import Chart from '../containers/Chart'
 // import Total from '../containers/Total'
-// import AddCar from '../containers/AddCar'
+import addBusiness from '../containers/addBusiness'
  
 const Listing = (props) => {
     return (
          <Container maxWidth="lg">
             {/* <h4>Welcome, {props.user.username}</h4> */}
-            {/* <div className="flex-container">
-                <Chart />
-                <Total />
-                <AddCar carTotal={props.cars.length} />
-            </div> */}
+             <div className="flex-container">
+                {/* <Chart />
+                <Total /> */}
+                <addBusiness businessTotal={props.businesses.length} />
+            </div> 
             <Table>
                 <TableHead>
                     <TableRow>
@@ -42,10 +42,10 @@ const Listing = (props) => {
                         <TableCell>{business["hours"]}</TableCell>
                         <TableCell>{business["address"]}</TableCell>
                         <TableCell>
-                            {/* <DeleteIcon
+                            <DeleteIcon
                                 // add onClick method here
-                                onClick = {() => props.removeCar(idx) }
-                                className="icon text-red" /> */}
+                                onClick = {() => props.removeBusiness(idx) }
+                                className="icon text-red" /> 
                         </TableCell>
                     </TableRow>
                 ))}

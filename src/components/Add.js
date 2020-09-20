@@ -27,11 +27,11 @@ class Add extends Component {
      handleSubmit = (e) => {
          e.preventDefault()
          const payload = { ...this.state }
-         payload.id = this.props.carTotal + 1
+         payload.id = this.props.businessTotal + 1
          delete payload.open
-         console.log("THE CAR", payload)
+         console.log("BUSINESS", payload)
          // add this.props.addCar function here
-         this.props.addCar(payload)
+         this.props.addBusiness(payload)
          // also add this.setState to close the dialog
          this.setState({open: false})
   }

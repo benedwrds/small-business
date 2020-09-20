@@ -7,27 +7,9 @@ import MenuIcon from '@material-ui/icons/Menu'
 // import {Link} from 'react-router'
 //   import Link from '@material-ui/core/Link'
 
-class Navigation extends Component {
-    constructor(){//new
-      super();//new
-    this.state = {  //new "this.state"
-      loggedIn : false, //new
-        };   
-    this.changeState = this.changeState.bind(this);
-    }
-
-    changeState = () => {
-        this.setState({
-        loggedIn : !this.state.login
-        });
-      };
-      //const Navigation = () => {
-          render(){ //new
-            const {loggedIn} = this.state;
-    return (
-             
-
- <div>
+const Navigation = (props) => {
+    return (        
+    <div>
         <AppBar position="relative">
             <Toolbar>
                 <IconButton color="inherit">
@@ -39,19 +21,21 @@ class Navigation extends Component {
                <ul className="nav-list">
                    <li className="nav-list-item">
                         <Link to="/listings">Listings</Link>  
-                    </li>
+                    </li> 
+                    <li className="nav-list-item">
+                         <Link to="/add"
+                         >{props.loggedIn && "Add"}</Link>  
+                    </li> 
                     <li className="nav-list-item">
                          <Link to="/login"
-                         onClick={this.changeState}
-                         >{loggedIn ? "Login" : "Log Out"}</Link>  
-                        
-                    </li>      
+                         >{props.loggedIn ? "Login" : "Log Out"}</Link>        
+                    </li>   
                </ul>
             </Toolbar>
         </AppBar>
- </div>    
-)
- }
+    </div>    
+    )
 }
+
 
 export default Navigation

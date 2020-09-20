@@ -12,16 +12,16 @@ const checkAuth = () => {
 }
 
 // Write ProtectedRoute function here
-// const ProtectedRoute = ({component: Component, ...rest}) => {
-//   return (
-//       <Route
-//       {...rest}
-//       render={(props) => checkAuth()
-//           ? <Component {...props} />
-//           : <Redirect to="/login" />}
-//       />
-//   )
-// }
+const ProtectedRoute = ({component: Component, ...rest}) => {
+  return (
+      <Route
+      {...rest}
+      render={(props) => checkAuth()
+          ? <Component {...props} />
+          : <Redirect to="/login" />}
+      />
+  )
+}
 
 const Router = () => {
     return (
@@ -29,7 +29,7 @@ const Router = () => {
             <Route exact path="/" component={Listing} />
             <Route path="/login" component={Login} />
             <Route path="/details/:id" component={Details}/> 
-             <Route path="/add" component={Add} />      
+             <ProtectedRoute path="/add" component={Add} />      
         </Switch>
     );
 };
