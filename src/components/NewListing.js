@@ -12,7 +12,7 @@ import {
 import DeleteIcon from '@material-ui/icons/Delete'
 // import Chart from '../containers/Chart'
 // import Total from '../containers/Total'
-import addBusiness from '../containers/AddBusiness'
+import addBusiness from '../containers/Add'
 
 const NewListing = (props) => {
     return (

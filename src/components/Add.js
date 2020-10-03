@@ -9,11 +9,10 @@ import {
 
 class Add extends Component {
     state = {
-        open: false,
         name: '',
-        mpg: '',
-        cylinders: '',
-        horsepower: '',
+        description: '',
+        address: '',
+        hours: ''
     }
 
     // toggleDialog = () => this.setState({ open: !this.state.open })
@@ -27,20 +26,25 @@ class Add extends Component {
      handleSubmit = (e) => {
          e.preventDefault()
          const payload = { ...this.state }
-         payload.id = this.props.businessTotal + 1
+         payload.id = this.props.businesses.length + 1
          delete payload.open
          console.log("BUSINESS", payload)
          // add this.props.addCar function here
          this.props.addBusiness(payload)
          // also add this.setState to close the dialog
         //  this.setState({open: false})
+        this.setState({
+            name: '',
+            description: '',
+            address: '',
+            hours: ''
+        })
   }
     
 
     componentDidUpdate = (prevProps, prevState) => {
         if (prevState.open !== this.state.open) {
             this.setState({
-                id: '',
                 name: '',
                 description: '',
                 address: '',
@@ -72,12 +76,6 @@ class Add extends Component {
                             <form 
                                 onSubmit={this.handleSubmit}
                                 style={{ display: 'flex', flexDirection: 'column', width: '350px', marginLeft: '3%', marginTop: '1%' }}>
-                                <TextField 
-                                    id="id" 
-                                    placeholder="Id" 
-                                    value={this.state.id} 
-                                    onChange={this.handleTextChange} 
-                                    required />
                                 <TextField 
                                     id="name" 
                                     placeholder="Name" 

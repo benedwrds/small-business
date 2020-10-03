@@ -8,4 +8,11 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(null, mapDispatchToProps)(Add)
+const mapStateToProps = (state) => {
+    return {
+        businesses: state.businesses
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Add)
+
