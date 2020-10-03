@@ -2,7 +2,8 @@ import React from 'react'
 import { Switch, Route, Redirect } from 'react-router'
 import cookie from 'cookie'
 import Listing from './containers/Listing'
-import Login from './components/Login'
+import NewListing from './containers/NewListing'
+import Login from './containers/Login'
  import Add from './components/Add'
  import Details from './containers/Details'
 
@@ -26,7 +27,8 @@ const ProtectedRoute = ({component: Component, ...rest}) => {
 const Router = () => {
     return (
         <Switch>
-            <Route exact path="/" component={Listing} />
+            {/* <Route exact path="/" component={NewListing} /> */}
+            <Route path="/" component={Listing}/>
             <Route path="/login" component={Login} />
             <Route path="/details/:id" component={Details}/> 
              <ProtectedRoute path="/add" component={Add} />      
@@ -35,3 +37,4 @@ const Router = () => {
 };
 
 export default Router;
+

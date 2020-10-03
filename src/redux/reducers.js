@@ -15,8 +15,10 @@ const businesses = (state = [], action) => {
 
 const loggedIn = (state = false, action) => {
   switch(action.type){
-    case'LOG_IN':
-      return {...state, loggedIn: true}
+    case 'LOGGED_IN':
+      return true
+    case 'LOGGED_OUT':
+      return false
     default: 
       return state
   }

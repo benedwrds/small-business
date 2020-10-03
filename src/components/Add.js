@@ -33,7 +33,7 @@ class Add extends Component {
          // add this.props.addCar function here
          this.props.addBusiness(payload)
          // also add this.setState to close the dialog
-         this.setState({open: false})
+        //  this.setState({open: false})
   }
     
 
@@ -55,6 +55,7 @@ class Add extends Component {
             <Fragment>
               {/* <div>
                  <div style={{ textAlign: 'center' }}> 
+                 s
                     {/* <h1>Add Car:</h1> 
                     <Button
                         // variant="contained"
@@ -70,7 +71,7 @@ class Add extends Component {
                         <DialogContent>
                             <form 
                                 onSubmit={this.handleSubmit}
-                                style={{ display: 'flex', flexDirection: 'column', width: '350px' }}>
+                                style={{ display: 'flex', flexDirection: 'column', width: '350px', marginLeft: '3%', marginTop: '1%' }}>
                                 <TextField 
                                     id="id" 
                                     placeholder="Id" 

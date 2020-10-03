@@ -2,18 +2,31 @@
 //Description
 //Hours
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
 
 const Details = (props) => {
   const id = props.match.params.id
   const business = props.businesses.find(b => b.id == id)
   return (
-    
-      <div>
-        <p>Hello</p>
-         {business.name} 
-        <br></br>
-        {business.description}
-        {/* {props.businesses[0].description} */}
+  
+      <div style={{marginLeft: "40%", marginTop: "1%"
+      }}>
+        <Typography variant="h6"
+        style={{fontWeight: "bold"}}>
+          {business.name} 
+        </Typography>
+        <Typography 
+        style={{fontWeight: "bold"}}>
+          {business.address}
+        </Typography>
+        <Typography 
+        style={{fontWeight: "bold"}}>
+          {business.hours}
+        </Typography>
+        <Typography variant="subtitle2" gutterBottom>
+          {business.description}
+          {/* {props.businesses[0].description} */}
+        </Typography>    
       </div>
     )
   }

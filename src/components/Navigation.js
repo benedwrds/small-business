@@ -20,16 +20,33 @@ const Navigation = (props) => {
                 </Typography>
                <ul className="nav-list">
                    <li className="nav-list-item">
-                        <Link to="/listings">Listings</Link>  
+                        <Link to="/">Listings</Link>  
                     </li> 
                     <li className="nav-list-item">
                          <Link to="/add"
                          >{props.loggedIn && "Add"}</Link>  
                     </li> 
-                    <li className="nav-list-item">
+                    {/* if props.logged = true display "log out" else display "login" */}
+                    {props.loggedIn ?    
+                         <li className="nav-list-item">
+                         <Link to='login'  onClick={() => {
+                            document.cookie = "loggedIn=";
+                            // window.location.replace("/");
+                            props.loggedOut();
+                          }}
+                        >Log Out</Link>
+                         </li>     
+                         :
+                         <li className="nav-list-item">
                          <Link to="/login"
-                         >{props.loggedIn ? "Login" : "Log Out"}</Link>        
+                         >Login</Link>  
+                    {/* >{props.loggedOut && 'Login'}</Link>     */}
                     </li>   
+                         }
+               
+                    
+             
+                 
                </ul>
             </Toolbar>
         </AppBar>

@@ -12,16 +12,16 @@ import {
 import DeleteIcon from '@material-ui/icons/Delete'
 // import Chart from '../containers/Chart'
 // import Total from '../containers/Total'
-import AddBusiness from '../containers/AddBusiness'
- 
-const Listing = (props) => {
+import addBusiness from '../containers/AddBusiness'
+
+const NewListing = (props) => {
     return (
          <Container maxWidth="lg">
             {/* <h4>Welcome, {props.user.username}</h4> */}
              <div className="flex-container">
                 {/* <Chart />
                 <Total /> */}
-                <AddBusiness businessTotal={props.businesses.length} />
+                 {/* <addBusiness businessTotal={props.businesses.length} /> */}
             </div> 
             <Table>
                 <TableHead>
@@ -30,32 +30,22 @@ const Listing = (props) => {
                         <TableCell>Description</TableCell>
                         <TableCell>Hours</TableCell>
                         <TableCell>Address</TableCell>
-                        <TableCell>Delete</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                 {props.businesses.map((business, idx) => (
-                  
                     <TableRow key={idx}>
+                        {/* <TableCell>{business["name"]}</TableCell> */}
                         <TableCell><Link href ={`/details/${business.id}`}>{business["name"]}</Link></TableCell>
                         <TableCell>{business["description"]}</TableCell>
                         <TableCell>{business["hours"]}</TableCell>
                         <TableCell>{business["address"]}</TableCell>
-                        <TableCell>
-                          {/* {props.loggedIn */}
-                            {/* <DeleteIcon
-                                // add onClick method here
-                                onClick = {() => props.removeBusiness(idx) }
-                                className="icon text-red" />  */}
-                        </TableCell>
                     </TableRow>
                 ))}
                 </TableBody>
             </Table>
         </Container>
-
-        
     )
 }
 
-export default Listing
+export default NewListing

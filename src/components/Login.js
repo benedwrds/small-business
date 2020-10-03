@@ -18,12 +18,17 @@ class App extends Component {
     this.setState(state)
   }
 
+  
+
   login = (e) => {
+    // debugger
     e.preventDefault()
     // set cookie here
     // set loggedIn = true and max-age = 60*1000 (one minute)
+    this.props.loggedIn();
     document.cookie = "loggedIn=true;max-age=60*1000"
-    window.location.replace("/")
+    // window.location.replace("/")
+    this.props.history.push("/")
   }
 
   render() {

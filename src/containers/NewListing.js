@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-// import { addbusiness} from '../redux/actions'
-import Listing from '../components/Listing'
+//import { addbusiness} from '../redux/actions'
+import NewListing from '../components/NewListing'
 
 const mapStateToProps = (state) => {
   return { 
@@ -9,4 +9,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Listing)
+export default connect(mapStateToProps)(NewListing)
