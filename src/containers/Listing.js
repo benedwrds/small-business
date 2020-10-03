@@ -5,7 +5,8 @@ import Listing from '../components/Listing'
 const mapStateToProps = (state) => {
   return { 
   //ex:props.businesses  //array
-      businesses: state.businesses
+      businesses: state.businesses,
+      loggedIn: state.loggedIn
   }
 }
 

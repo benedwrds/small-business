@@ -41,13 +41,15 @@ const Listing = (props) => {
                         <TableCell>{business["description"]}</TableCell>
                         <TableCell>{business["hours"]}</TableCell>
                         <TableCell>{business["address"]}</TableCell>
-                        <TableCell>
-                          {/* {props.loggedIn */}
-                            {/* <DeleteIcon
-                                // add onClick method here
-                                onClick = {() => props.removeBusiness(idx) }
-                                className="icon text-red" />  */}
-                        </TableCell>
+                        {props.loggedIn && (
+                          <TableCell>
+                          {/* <DeleteIcon
+                            // add onClick method here
+                              onClick = {() => props.removeBusiness(idx) }
+                              className="icon text-red" />  */}
+                          </TableCell>
+                        )}
+
                     </TableRow>
                 ))}
                 </TableBody>
