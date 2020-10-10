@@ -5,10 +5,9 @@ import {
     TableBody,
     TableCell,
     TableHead,
-    TableRow,
-    Toolbar, 
-    Link
+    TableRow
 } from '@material-ui/core'
+import {Link} from 'react-router-dom'
 import DeleteIcon from '@material-ui/icons/Delete'
 // import Chart from '../containers/Chart'
 // import Total from '../containers/Total'
@@ -44,7 +43,7 @@ const Listing = (props) => {
                 {businesses.map((business, idx) => (
                   
                     <TableRow key={idx}>
-                        <TableCell><Link href ={`/details/${business.id}`}>{business["name"]}</Link></TableCell>
+                        <TableCell><Link to={`/details/${business.id}`}>{business["name"]}</Link></TableCell>
                         <TableCell>{business["description"]}</TableCell>
                         <TableCell>{business["hours"]}</TableCell>
                         <TableCell>{business["address"]}</TableCell>

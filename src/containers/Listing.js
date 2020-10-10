@@ -11,3 +11,6 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(Listing)
+//listing and details container must be different 
+//state for listing is working fine but not for details
+//look into redux dev tools
